@@ -32,8 +32,6 @@ a:hover {
   flex-direction: column;
   width: 100%;
   max-width: 2000px;
-  margin: auto;
-  padding: 20px;
 }
 
 /* Fullpage Banner */
@@ -69,6 +67,7 @@ a:hover {
   border-radius: 10px;
   margin: -40px 0 40px 0;
   transition: filter 0.3s;
+  margin-top: -15px;
 }
 
 #banner .image-wrapper .overlay-text {
@@ -93,11 +92,9 @@ a:hover {
 /* About Us Section and Services We Provide */
 /* Use the services for other responsive design, not carousel*/
 .container-carousel {
-  background-color: #f9f9f9; /* Light grey background for contrast */
-  padding: 50px 0; /* Space above and below */
+  background-color: #f9f9f9; /* Light grey background for contrast */ /* Space above and below */
   border-radius: 10px; /* Rounded edges */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  margin: 20px 0; /* Margin on top and bottom to separate from other content */
 }
 
 /* Styles for the carousel */
@@ -119,9 +116,8 @@ a:hover {
 
 .container2 {
   display: flex;
-  margin: auto;
   width: 80%;
-  padding: 20px;
+  padding-bottom: 20px;
 }
 
 .carousel-control-prev-icon,
@@ -134,12 +130,42 @@ a:hover {
   ); /* Semi-transparent background for controls */
 }
 
+#about-us {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-image: linear-gradient(to right, #a89f91, #89a9a8);
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#about-us h1 {
+  width: 100%;
+  padding-top: 20px;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  color: #333;
+}
+
+#about-us .card {
+  max-width: 300px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.border-right {
+  border-right: 2px solid #ccc;
+}
+
 #about-us img {
+  width: 100%;
+  margin-top: 80%;
   border-radius: 15px;
   transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for zoom-in effect and shadow color change */
   display: block; /* To remove any spacing under the image */
-  width: 100%; /* Makes sure the image takes full width of its container */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial box shadow */
+  overflow: hidden;
 }
 
 #about-us img:hover {
@@ -148,14 +174,10 @@ a:hover {
 }
 
 .main-container,
-#about-us,
 #services {
   background-image: linear-gradient(to right, #a89f91, #89a9a8);
-  padding: 60px 0;
   text-align: center;
-  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -166,9 +188,9 @@ a:hover {
 }
 
 .main-container h1,
-#about-us h1,
 #services h1 {
   width: 100%;
+  padding-top: 20px;
   margin-bottom: 30px;
   font-size: 2.5em;
   color: #333;
@@ -178,35 +200,24 @@ a:hover {
   margin-bottom: 10px;
 }
 
-#about-us p {
-  padding: 20px;
-}
-
-#about-us div,
 #services div {
   flex: 0 0 calc(25% - 20px);
   margin: 10px;
   box-sizing: border-box;
 }
 
-#about-us img,
 #services img {
   overflow: hidden;
   max-width: 100%;
-  margin: 20px 0;
   display: block;
-  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact Us Section */
 #contact-us {
   background-color: #fff;
-  padding: 60px 0;
   text-align: center;
-  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 40px;
 }
 
 #contact-us h1 {
@@ -269,16 +280,15 @@ a:hover {
   }
 
   #banner .text-container {
-    margin: 0 0 60px 0;
     align-items: center;
     text-align: center;
   }
 
   .image-wrapper {
+    margin-top: 20px;
     width: 70vw; /* Adjust to your preference */
     height: 70vh; /* Adjust to your preference */
   }
-  #about-us div,
   #services div {
     flex: 0 0 calc(50% - 20px);
   }
@@ -291,7 +301,15 @@ a:hover {
     width: 95%;
     padding: 5px;
   }
-  #about-us div,
+
+  #about-us img {
+    margin-top: 10px;
+  }
+
+  .border-right {
+    border-right: 0;
+  }
+
   #services div {
     flex: 0 0 calc(50% - 10px);
     margin: 5px;
@@ -327,12 +345,6 @@ a:hover {
     width: 80vw; /* Adjust to your preference */
     height: 40vh; /* Adjust to your preference */
   }
-
-  #about-us img {
-    border-radius: 15px;
-    padding: 20px;
-  }
-  #about-us div,
   #services div {
     flex: 1 0 100%; /* This ensures they take the full width and stack */
     margin: 10px 0;

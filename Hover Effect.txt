@@ -1,0 +1,12 @@
+#about-us img {
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for zoom-in effect and shadow color change */
+  display: block; /* To remove any spacing under the image */
+  width: 100%; /* Makes sure the image takes full width of its container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial box shadow */
+}
+
+#about-us img:hover {
+  transform: scale(1.1); /* Zoom-in effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* Darker shadow */
+}
